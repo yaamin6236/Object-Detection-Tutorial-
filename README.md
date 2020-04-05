@@ -29,6 +29,6 @@ python setup.py build
 python setup.py install
 
 import tensorflow as tf
-  >>> hello = tf.constant('Hello, TensorFlow!')
-  >>> sess = tf.Session()
-  >>> print(sess.run(hello))
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
