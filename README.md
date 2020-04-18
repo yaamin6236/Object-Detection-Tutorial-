@@ -54,4 +54,30 @@ python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=imag
 python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.record
 
 
+
+
+These commands are for the Training video
+
+Line 9. Change num_classes to the number of different objects you want the classifier to detect. For the above basketball, shirt, and shoe detector, it would be num_classes : 3 .
+
+Line 106. Change fine_tune_checkpoint to:
+
+fine_tune_checkpoint : "C:/tensorflow1/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
+Lines 123 and 125. In the train_input_reader section, change input_path and label_map_path to:
+
+input_path : "C:/tensorflow1/models/research/object_detection/train.record"
+label_map_path: "C:/tensorflow1/models/research/object_detection/training/labelmap.pbtxt"
+Line 130. Change num_examples to the number of images you have in the \images\test directory.
+
+Lines 135 and 137. In the eval_input_reader section, change input_path and label_map_path to:
+
+input_path : "C:/tensorflow1/models/research/object_detection/test.record"
+label_map_path: "C:/tensorflow1/models/research/object_detection/training/labelmap.pbtxt"
+
+
+python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
+
+tensorboard --logdir=training
+
+SET PATH=D:\tools\cuda\bin;%PATH%
   
