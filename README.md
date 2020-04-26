@@ -10,6 +10,7 @@ python -m pip install --upgrade pip
 pip install tensorflow-gpu==1.15
 
 #If you do not have a gpu write this command
+
 pip install tensorflow==1.15
 
 
