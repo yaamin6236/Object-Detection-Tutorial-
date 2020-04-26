@@ -1,7 +1,7 @@
 # Object-Detection-Tutorial-
 Here are all the commands 
 
-conda create -n tensorflow1 pip python=3.5
+conda create -n tensorflow1 pip python=3.7
 
 activate tensorflow1
 
@@ -9,7 +9,12 @@ python -m pip install --upgrade pip
 
 pip install tensorflow-gpu==1.15
 
+#If you do not have a gpu write this command
+pip install tensorflow==1.15
+
+
 (tensorflow1) C:\> conda install -c anaconda protobuf
+
 (tensorflow1) C:\> pip install pillow
 (tensorflow1) C:\> pip install lxml
 (tensorflow1) C:\> pip install Cython
