@@ -43,7 +43,7 @@ python setup.py build
 
 python setup.py install
 
-Python
+#For the next couple of commands you will need to enter python to do this type Python and press enter
 
 import tensorflow as tf
 
@@ -52,6 +52,8 @@ hello = tf.constant('Hello, TensorFlow!')
 sess = tf.Session() 
 
 print(sess.run(hello))
+
+#This command should return "hello", to exit python type quit()
 
 Here are the commands for labelimg video
 
